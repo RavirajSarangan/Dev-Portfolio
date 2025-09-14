@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Personal Portfolio Website
 
 This repository contains the source code and files for my personal portfolio website. The website is built using HTML, CSS, and JavaScript.
@@ -38,3 +39,6 @@ If you have any questions or inquiries, please feel free to reach out to me thro
 
 Thank you for visiting my personal portfolio repository! I hope you find it informative and visually appealing.
 ![Portfolio](https://github.com/Venkateeshh/Portfolio-Website/assets/117290841/d05942e3-6970-47eb-9757-482f11bb6044)
+=======
+# Dev-Portfolio
+>>>>>>> c575b482d2af119a830ba4397929a49e88da0fed
