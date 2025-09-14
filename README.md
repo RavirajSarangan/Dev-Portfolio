@@ -1,44 +1,61 @@
-<<<<<<< HEAD
-# Personal Portfolio Website
+# Dev Portfolio
 
-This repository contains the source code and files for my personal portfolio website. The website is built using HTML, CSS, and JavaScript.
-
-## Description
-
-The personal portfolio website showcases my skills, projects, and experiences as a web developer. It serves as an online platform to highlight my work and provide information about my background and expertise.
+This is a modern portfolio website and admin dashboard, powered by Supabase backend and hosted on GitHub Pages.
 
 ## Features
+- Modern UI (2025 trends): card/grid layouts, icons, animated backgrounds
+- Fully dynamic admin dashboard: manage Home, About, Contact, Projects, Skills, Qualifications
+- Image upload/preview, modal confirmations, toast alerts
+- Strong client-side validation, input sanitization, secure authentication
+- Undo/redo actions for admin changes
+- Supabase backend for data management and authentication
+- Easy deployment on GitHub Pages
 
-- Home: Introduces myself and provides a brief overview of my skills and interests.
-- About: Details my professional background, education, and relevant experience.
-- Projects: Showcases the projects I have worked on, including descriptions, screenshots, and links to live demos or repositories.
-- Skills: Lists the programming languages, frameworks, and tools I am proficient in.
-- Contact: Offers various ways to get in touch with me, such as through email, social media, or a contact form.
+## Technology Stack
+- HTML5, CSS3 (Poppins font, Unicons icons)
+- JavaScript (ES6+)
+- Supabase (PostgreSQL database, Auth, Storage)
+- GitHub Pages (static hosting)
+- Swiper.js (portfolio slider)
 
-## Technologies Used
+## Tools Used
+- Visual Studio Code (development)
+- Git & GitHub (version control, hosting)
+- Supabase Dashboard (database, auth, storage management)
+- Figma (UI/UX design)
+- Chrome DevTools (debugging)
+- Node.js (optional, for local development server)
 
-- HTML: Markup language used for structuring the website.
-- CSS: Stylesheet language used for designing and formatting the website.
-- JavaScript: Programming language used for adding interactivity and dynamic features.
+## Deployment Steps
+1. Create a Supabase project at [supabase.com](https://supabase.com)
+   - Set up tables: home, about, contact, projects, skills, qualifications, users
+   - Get your Supabase project URL and anon/public API key
+2. Clone this repository or upload your files
+3. Update Supabase config in all admin pages with your project URL and API key
+4. Push all files to your GitHub repository
+   ```sh
+   git add .
+   git commit -m "Initial commit"
+   git push -u origin main
+   ```
+5. Enable GitHub Pages in repository settings (set source to main branch)
+6. Access your site at `https://yourusername.github.io/your-repo/`
 
-## Getting Started
+## How to Use
+- Log in via `admin-login.html` (Supabase Auth)
+- Manage all portfolio sections via admin dashboard
+- All changes are saved to Supabase and reflected on the main site
 
-To view the website locally or make modifications, follow these steps:
+## Future Updates
+- Integrate notifications and activity logs for admin actions
+- Add multi-user roles and permissions
+- Enable file uploads to Supabase Storage for larger assets
+- Add analytics dashboard for site visits and user interactions
+- Support for custom themes and branding
+- API integration for blog, newsletter, or external services
+- Progressive Web App (PWA) features for offline access
+- Automated backups and export/import of portfolio data
 
-1. Clone the repository: `git clone [repository URL]`
-2. Open the project folder in your preferred code editor.
-3. Open the `index.html` file in a web browser to view the website.
+---
 
-## Contributing
-
-I appreciate any suggestions, feedback, or contributions to enhance this personal portfolio website. If you would like to contribute, please follow the guidelines in the `CONTRIBUTING.md` file.
-
-## Contact
-
-If you have any questions or inquiries, please feel free to reach out to me through the contact information provided in the website or by using the contact form.
-
-Thank you for visiting my personal portfolio repository! I hope you find it informative and visually appealing.
-![Portfolio](https://github.com/Venkateeshh/Portfolio-Website/assets/117290841/d05942e3-6970-47eb-9757-482f11bb6044)
-=======
-# Dev-Portfolio
->>>>>>> c575b482d2af119a830ba4397929a49e88da0fed
+© 2025 Raviraj Sarangan & contributors
