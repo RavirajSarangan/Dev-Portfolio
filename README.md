@@ -1,4 +1,4 @@
-# Dev Portfolio
+# Portfolio
 
 This is a modern portfolio website and admin dashboard, powered by Supabase backend and hosted on GitHub Pages.
 
