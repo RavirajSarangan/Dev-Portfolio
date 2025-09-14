@@ -272,9 +272,9 @@
   </div>
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
   <script>
-    // Supabase config (updated)
+    // Supabase config (auto-updated with your anon public API key)
     const SUPABASE_URL = 'https://ezbwbhriulkxlrhioknz.supabase.co';
-    const SUPABASE_KEY = 'your-anon-key'; // Replace with your actual anon/public key from Supabase dashboard
+    const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImV6YndiaHJpdWxreGxyaGlva256Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTc4NjcyMjMsImV4cCI6MjA3MzQ0MzIyM30.auhNKnw-8oOgWB93r3CIztXfih54gObehlxkfZ1nORQ';
     const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
     // Login with Supabase Auth
@@ -286,8 +286,9 @@
         showToast('Enter a valid email address!');
         return false;
       }
-      if (!validatePassword(password)) {
-        showToast('Password must be at least 8 characters, include uppercase, lowercase, and a number.');
+      // Relaxed password validation: at least 6 characters
+      if (password.length < 6) {
+        showToast('Password must be at least 6 characters.');
         return false;
       }
       const { error } = await supabase.auth.signInWithPassword({ email, password });
