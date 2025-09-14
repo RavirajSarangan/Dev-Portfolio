@@ -272,9 +272,9 @@
   </div>
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
   <script>
-    // Supabase config (replace with your project details)
-    const SUPABASE_URL = 'https://your-project.supabase.co';
-    const SUPABASE_KEY = 'your-anon-key';
+    // Supabase config (updated)
+    const SUPABASE_URL = 'https://ezbwbhriulkxlrhioknz.supabase.co';
+    const SUPABASE_KEY = 'your-anon-key'; // Replace with your actual anon/public key from Supabase dashboard
     const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
     // Login with Supabase Auth
@@ -298,7 +298,6 @@
         showToast('Invalid credentials!');
       }
     });
-    // ...existing code...
     // Animated background
     const canvas = document.getElementById('bgAnim');
     const ctx = canvas.getContext('2d');

@@ -812,51 +812,13 @@ window.addEventListener('DOMContentLoaded', loadAllSkills);
     <script type="text/javascript" src="assets/swiper-bundle.min.js"></script>
     <script src="https://kit.fontawesome.com/2205d59d52.js" crossorigin="anonymous"></script>
     <script src="assets/ptj.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
     <script>
-      // Dynamically load Programming Languages from localStorage
-      function loadProgrammingSkills() {
-        const skills = localStorage.getItem('skills');
-        const skillsArr = skills ? JSON.parse(skills) : ["C#", "Python", "JavaScript", "Css", "Html"];
-        const container = document.getElementById('skills-programming-list');
-        if (!container) return;
-        container.innerHTML = '';
-        skillsArr.forEach(skill => {
-          const div = document.createElement('div');
-          div.className = 'skills__data';
-          div.innerHTML = `<div class='skills__titles'><h3 class='skills__name'>${skill}</h3></div>`;
-          container.appendChild(div);
-        });
-      }
-      function loadAllSkills() {
-  const skills = localStorage.getItem('allSkills');
-  const allSkills = skills ? JSON.parse(skills) : {
-    Programming: ["C#", "Python", "JavaScript", "Css", "Html"],
-    Technologies: ["GitHub", "MongoDB", "MySQL", "Git", "SQL"],
-    Tools: ["VS Code", "Figma", "Canva", "Postman", "Jupyter Notebook"],
-    Constructs: ["DBMS", "DS & Algorithms", "Networking", "Programming"],
-    AI: ["ChatGPT", "Google Bard", "Midjourney", "DALL·E", "Suna"]
-  };
-  function renderList(arr, containerId) {
-    const container = document.getElementById(containerId);
-    if (!container) return;
-    container.innerHTML = '';
-    arr.forEach(skill => {
-      const div = document.createElement('div');
-      div.className = 'skills__data';
-      div.innerHTML = `<div class='skills__titles'><h3 class='skills__name'>${skill}</h3></div>`;
-      container.appendChild(div);
-    });
-  }
-  renderList(allSkills.Programming, 'skills-programming-list');
-  renderList(allSkills.Technologies, 'skills-technologies-list');
-  renderList(allSkills.Tools, 'skills-tools-list');
-  renderList(allSkills.Constructs, 'skills-constructs-list');
-  renderList(allSkills.AI, 'skills-ai-list');
-}
-      window.addEventListener('DOMContentLoaded', () => {
-        loadProgrammingSkills();
-        loadAllSkills();
-      });
-    </script>
+    // Supabase config (updated with your anon public API key)
+    const SUPABASE_URL = 'https://ezbwbhriulkxlrhioknz.supabase.co';
+    const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImV6YndiaHJpdUxreGxyaGlva256Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTc4NjcyMjMsImV4cCI6MjA3MzQ0MzIyM30.auhNKnw-8oOgWB93r3CIztXfih54gObehlxkfZ1nORQ';
+    const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+    // ...existing code...
+  </script>
   </body>
 </html>
