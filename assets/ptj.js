@@ -43,24 +43,23 @@ skillsHeader.forEach((el) => {
   el.addEventListener("click", toggleSkills);
 });
 
-/*============== Qualification Skills ===============*/
+/*============== Qualification Tabs (Education / Experience) ===============*/
 
-/*const tabs = document.querySelectorAll('[data-target]'),
-      tabContents = document.querySelectorAll('[data-content]')
-tabs.forEach(tab =>{
-    tab.addEventListener('click', () =>{
-        const target = document.querySelector(tab.dataset.target)
-        tabContents.forEach(tabContent =>{
-            tabContent.classList.remove('qualification__active')
-        })
-        target.classList.add('qualification__active')
-        tab.forEach(tab =>{
-            tab.classList.remove('qualification__active')
-        })
-        tab.classList.add('qualification__active')
-    })
-})      
-*/
+const tabs = document.querySelectorAll('[data-target]'),
+      tabContents = document.querySelectorAll('[data-content]');
+tabs.forEach(tab => {
+  tab.addEventListener('click', () => {
+    const target = document.querySelector(tab.dataset.target);
+    tabContents.forEach(tabContent => {
+      tabContent.classList.remove('qualification__active');
+    });
+    if (target) target.classList.add('qualification__active');
+    tabs.forEach(t => {
+      t.classList.remove('qualification__active');
+    });
+    tab.classList.add('qualification__active');
+  });
+});
 
 /*======================= Services Modal ===================*/
 const modalViews = document.querySelectorAll(".services__modal"),
@@ -84,6 +83,22 @@ modalCloses.forEach((modalClose) => {
     });
   });
 });
+
+/*======================= Section scroll animations ===================*/
+const animateSections = document.querySelectorAll("section[data-animate]");
+if (animateSections.length && "IntersectionObserver" in window) {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+        }
+      });
+    },
+    { threshold: 0.1, rootMargin: "0px 0px -50px 0px" }
+  );
+  animateSections.forEach((section) => observer.observe(section));
+}
 
 /*======================= Portfolio Swiper ===================*/
 var swiper = new Swiper(".portfolio__container", {

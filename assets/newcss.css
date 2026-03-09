@@ -595,16 +595,48 @@ img {
   transform: translate(6px, -7px);
 }
 
-.qualification [data-content] {
+#qualification [data-content] {
   display: none;
 }
 
-.qualification__active[data-content] {
-  display: none;
+#qualification [data-content].qualification__active {
+  display: block;
 }
 
 .qualification__button.qualification__active {
   color: var(--first-color);
+}
+
+.qualification__cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.qualification__card {
+  background-color: var(--container-color);
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.qualification__card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  transform: translateY(-2px);
+}
+
+/*================= Section scroll animations ==================*/
+
+section[data-animate] {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+section[data-animate].is-visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /*================= Services ==================*/
@@ -685,6 +717,45 @@ img {
 .active-modal {
   opacity: 1;
   visibility: visible;
+}
+
+/*================== Services Section (What I Offer) ==================*/
+
+.services-offer__container {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.services-offer__card {
+  background-color: var(--container-color);
+  padding: 2rem 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s, transform 0.2s;
+}
+
+.services-offer__card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  transform: translateY(-2px);
+}
+
+.services-offer__icon {
+  font-size: 2.5rem;
+  color: var(--first-color);
+  margin-bottom: var(--mb-1);
+}
+
+.services-offer__title {
+  font-size: var(--h3-font-size);
+  font-weight: var(--font-medium);
+  margin-bottom: var(--mb-0-5);
+  color: var(--title-color);
+}
+
+.services-offer__description {
+  font-size: var(--small-font-size);
+  color: var(--text-color);
 }
 
 /*================== Portfolio ==================*/

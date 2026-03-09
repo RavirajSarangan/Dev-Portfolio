@@ -17,15 +17,15 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:title" content="Suha Anas - Portfolio">
     <meta property="og:description" content="Explore the portfolio, projects, qualifications, and contact details of Suha Anas, HND Software Engineering student from Jaffna.">
-    <meta property="og:image" content="https://suhaanas.site/assets/img/suha%20img%201.jpg">
+    <meta property="og:image" content="https://suhaanas.site/assets/img/profile.png">
     <meta property="og:url" content="https://suhaanas.site/">
     <meta property="og:type" content="website">
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Suha Anas - Portfolio">
     <meta name="twitter:description" content="Explore the portfolio, projects, qualifications, and contact details of Suha Anas, HND Software Engineering student from Jaffna.">
-    <meta name="twitter:image" content="https://suhaanas.site/assets/img/suha%20img%201.jpg">
-    <link rel="icon" type="image/png" href="assets/img/suha img 1.jpg">
+    <meta name="twitter:image" content="https://suhaanas.site/assets/img/profile.png">
+    <link rel="icon" type="image/png" href="assets/img/profile.png">
     <!-- Favicon updated to use round PNG for circular appearance -->
   </head>
 
@@ -53,6 +53,11 @@
             <li class="nav__item">
               <a href="#qualification" class="nav__link">
                 <i class="uil uil-briefcase-alt nav__icon"></i>Qualification
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="#services" class="nav__link">
+                <i class="uil uil-wrench nav__icon"></i>Services
               </a>
             </li>
             <li class="nav__item">
@@ -129,7 +134,7 @@
                     class="home__blob-img"
                     x="-79"
                     y="-46"
-                    xlink:href="assets/img/suha img 1.jpg"
+                    xlink:href="assets/img/profile.png"
                   />
                 </g>
               </svg>
@@ -161,12 +166,12 @@
 
       <!--======================= About========================-->
 
-      <section class="about section" id="about">
+      <section class="about section" id="about" data-animate>
         <h2 class="section__title">About Me</h2>
         <span class="section__subtitle">My introduction</span>
 
         <div class="about__container container grid">
-          <img src="assets/img/suha pic.jpg" alt="" class="about__img" />
+          <img src="assets/img/profile.png" alt="Suha Anas" class="about__img" />
 
           <div class="about__data">
             <p class="about__description">
@@ -203,7 +208,7 @@
 
       <!--===================== SKILLS =====================-->
 
-      <section class="skills section" id="skills">
+      <section class="skills section" id="skills" data-animate>
         <h2 class="section__title">Skills</h2>
         <span class="section__subtitle">My technical level</span>
         <div class="skills__container container grid">
@@ -298,6 +303,7 @@ window.addEventListener('DOMContentLoaded', loadAllSkills);
       <section
         class="qualification__section service__section"
         id="qualification"
+        data-animate
       >
         <h2 class="section__title">Qualification</h2>
         <span class="section__subtitle">My personal journey</span>
@@ -313,12 +319,19 @@ window.addEventListener('DOMContentLoaded', loadAllSkills);
               <i class="uil uil-graduation-cap qualification__icon"></i>
               Education
             </div>
+            <div
+              class="qualification__button button--flex"
+              data-target="#experience"
+            >
+              <i class="uil uil-briefcase-alt qualification__icon"></i>
+              Experience
+            </div>
           </div>
 
           <div class="qualification__sections">
             <!--====== Qualification Content 1 ======-->
             <div
-              class="qualification__content qualifiation__active services__content"
+              class="qualification__content qualification__active services__content"
               data-content
               id="education"
             >
@@ -355,8 +368,8 @@ window.addEventListener('DOMContentLoaded', loadAllSkills);
                   </div>
                 </div>
                 <div>
-                <span class="qualification__rounder"></span>
-                <span class="qualification__line"></span>
+                  <span class="qualification__rounder"></span>
+                  <span class="qualification__line"></span>
                 </div>
               </div>
 
@@ -421,28 +434,24 @@ window.addEventListener('DOMContentLoaded', loadAllSkills);
                         </li>
                         <li class="services__modal-service">
                           <i class="uil uil-check-circle services__modal-icon"></i>
-                          <p>Student coordinator in media and publication club of the college.</p> <!-- Leadership role in college club -->
-                        <!--</li>
+                          <p>Student coordinator in media and publication club of the college.</p>
+                        </li>
                          <li class="services__modal-service">
                           <i class="uil uil-check-circle services__modal-icon"></i>
-                          <p>Club Advisor for GeekHub.</p> <!-- Advisor role for student tech club 
+                          <p>Club Advisor for GeekHub.</p>
                         </li>
                         <li class="services__modal-service">
                           <i class="uil uil-check-circle services__modal-icon"></i>
-                          <p>CodeBlaze hackathon winners under open innovation.</p>  Hackathon achievement -->
-                        <!--</li> 
-                        <li class="services__modal-service">
-                          <i class="uil uil-check-circle services__modal-icon"></i>
-                          <p>Runners in Edu-Vitality Hackathon in the track of AI in Education.</p> <!-- Hackathon runner-up, AI in Education 
+                          <p>CodeBlaze hackathon winners under open innovation.</p>
                         </li>
                         <li class="services__modal-service">
                           <i class="uil uil-check-circle services__modal-icon"></i>
-                          <p>Runners in Edu-Vitality Hackathon in the track of AI in Education.</p> <!-- Hackathon runner-up, AI in Education -->
-                       <!-- </li>
+                          <p>Runners in Edu-Vitality Hackathon in the track of AI in Education.</p>
+                        </li>
                         <li class="services__modal-service">
                           <i class="uil uil-check-circle services__modal-icon"></i>
-                          <p>Finalist in Dark Pattern Buster Hackathon conducted by Department of Consumer Affairs of India.</p> <!-- Hackathon finalist, consumer affairs -->
-                        </li> 
+                          <p>Finalist in Dark Pattern Buster Hackathon conducted by Department of Consumer Affairs of India.</p>
+                        </li> -->
                       </ul>
                     </div>
                   </div>
@@ -453,12 +462,155 @@ window.addEventListener('DOMContentLoaded', loadAllSkills);
                 </div>
               </div>
             </div>
+
+            <!--====== Experience Content ======-->
+            <div
+              class="qualification__content services__content"
+              data-content
+              id="experience"
+            >
+              <!--====== Experience 1 ======-->
+              <div class="qualification__data">
+                <div>
+                  <h3 class="qualification__title">Sri JVT Consultant LTD</h3>
+                  <span class="qualification__subtitle">Graphic Designer</span>
+                  <div class="qualification__calender">
+                    <i class="uil uil-calendar-alt"></i> 2025
+                  </div>
+                  <span class="button button--flex button--small button--link services__button">
+                    View More <i class="uil uil-arrow-right button__icon"></i>
+                  </span>
+                  <div class="services__modal">
+                    <div class="services__modal-content">
+                      <h4 class="services__modal-title">Role Summary</h4>
+                      <i class="uil uil-times services__modal-close"></i>
+                      <ul class="services__modal-services grid">
+                        <li class="services__modal-service">
+                          <i class="uil uil-check-circle services__moda-icon"></i>
+                          <p>Graphic design for client projects and branding.</p>
+                        </li>
+                        <li class="services__modal-service">
+                          <i class="uil uil-check-circle services__moda-icon"></i>
+                          <p>Creating visual assets and marketing materials.</p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <span class="qualification__rounder"></span>
+                  <span class="qualification__line"></span>
+                </div>
+              </div>
+
+              <!--====== Experience 2 ======-->
+              <div class="qualification__data">
+                <div></div>
+                <div>
+                  <span class="qualification__rounder"></span>
+                  <span class="qualification__line"></span>
+                </div>
+                <div>
+                  <h3 class="qualification__title">VenomX Technology</h3>
+                  <span class="qualification__subtitle">Software Company<br />WordPress Developer</span>
+                  <div class="qualification__calender">
+                    <i class="uil uil-calendar-alt"></i> 2026 <span style="font-size: 0.95em; color: #4caf50; margin-left: 4px;">– Currently</span>
+                  </div>
+                  <span class="button button--flex button--small button--link services__button">
+                    View More <i class="uil uil-arrow-right button__icon"></i>
+                  </span>
+                  <div class="services__modal">
+                    <div class="services__modal-content">
+                      <h4 class="services__modal-title">Role Summary</h4>
+                      <i class="uil uil-times services__modal-close"></i>
+                      <ul class="services__modal-services grid">
+                        <li class="services__modal-service">
+                          <i class="uil uil-check-circle services__moda-icon"></i>
+                          <p>WordPress theme and plugin development.</p>
+                        </li>
+                        <li class="services__modal-service">
+                          <i class="uil uil-check-circle services__moda-icon"></i>
+                          <p>Building and maintaining client websites.</p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!--====== Experience 3 ======-->
+              <div class="qualification__data">
+                <div>
+                  <h3 class="qualification__title">Rose Beauty</h3>
+                  <span class="qualification__subtitle">Social Media Marketing</span>
+                  <div class="qualification__calender">
+                    <i class="uil uil-calendar-alt"></i> 2026 <span style="font-size: 0.95em; color: #4caf50; margin-left: 4px;">– Currently</span>
+                  </div>
+                  <span class="button button--flex button--small button--link services__button">
+                    View More <i class="uil uil-arrow-right button__icon"></i>
+                  </span>
+                  <div class="services__modal">
+                    <div class="services__modal-content">
+                      <h4 class="services__modal-title">Role Summary</h4>
+                      <i class="uil uil-times services__modal-close"></i>
+                      <ul class="services__modal-services grid">
+                        <li class="services__modal-service">
+                          <i class="uil uil-check-circle services__moda-icon"></i>
+                          <p>Social media strategy and content creation.</p>
+                        </li>
+                        <li class="services__modal-service">
+                          <i class="uil uil-check-circle services__moda-icon"></i>
+                          <p>Managing brand presence across platforms.</p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <span class="qualification__rounder"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--=================== Services ===================-->
+      <section class="services section" id="services" data-animate>
+        <h2 class="section__title">Services</h2>
+        <span class="section__subtitle">What I offer</span>
+
+        <div class="services-offer__container container grid">
+          <div class="services-offer__card">
+            <i class="uil uil-window-section services-offer__icon"></i>
+            <h3 class="services-offer__title">WordPress Development</h3>
+            <p class="services-offer__description">Custom WordPress sites, themes, and plugins.</p>
+          </div>
+          <div class="services-offer__card">
+            <i class="uil uil-browser services-offer__icon"></i>
+            <h3 class="services-offer__title">Website Development</h3>
+            <p class="services-offer__description">Responsive, modern websites built to your needs.</p>
+          </div>
+          <div class="services-offer__card">
+            <i class="uil uil-image-v services-offer__icon"></i>
+            <h3 class="services-offer__title">Poster Design</h3>
+            <p class="services-offer__description">Eye-catching posters and visual design.</p>
+          </div>
+          <div class="services-offer__card">
+            <i class="uil uil-video services-offer__icon"></i>
+            <h3 class="services-offer__title">AI Video Editor</h3>
+            <p class="services-offer__description">Video editing with AI-powered tools.</p>
+          </div>
+          <div class="services-offer__card">
+            <i class="uil uil-share-alt services-offer__icon"></i>
+            <h3 class="services-offer__title">Social Media Marketer</h3>
+            <p class="services-offer__description">Strategy, content, and growth on social platforms.</p>
           </div>
         </div>
       </section>
 
       <!--=================== Portfolio ===================-->
-      <section class="portfolio section" id="portfolio">
+      <section class="portfolio section" id="portfolio" data-animate>
         <h2 class="section__title">Projects</h2>
         <span class="section__subtitle">Most recent work</span>
 
@@ -518,6 +670,24 @@ window.addEventListener('DOMContentLoaded', loadAllSkills);
                 </a>
               </div>
             </div>
+            <!-- ------------------------portfolio 4: SASU Invoice -------------------- -->
+            <div class="portfolio__content grid swiper-slide">
+              <img src="assets/img/SASU-Invoice.png" class="portfolio__img" alt="SASU Invoice app on iMac mockup" />
+              <div class="portfolio__data">
+                <h3 class="portfolio__title">SASU Invoice</h3>
+                <p class="portfolio__description">
+                  A modern, privacy-first, client-side invoice generator built to run entirely in your browser. It allows freelancers and small businesses to quickly create, preview, and export stunning professional invoices without needing an account or a subscription.
+                </p>
+                <a href="https://github.com/suhaAnas/SASU-Invoice" class="button button--flex button--small portfolio__button">
+                  GitHub Repository
+                  <i class="uil uil-external-link-alt button__icon"></i>
+                </a>
+                <a href="https://sasuinvoice.netlify.app/" target="_blank" rel="noopener noreferrer" class="button button--flex button--small portfolio__button">
+                  See Live
+                  <i class="uil uil-external-link-alt button__icon"></i>
+                </a>
+              </div>
+            </div>
             <!-- ------------------------portfollio 4-------------------- 
             <div class="portfolio__content grid swiper-slide">
               <img src="assets/img/portfolio3.png" class="portfolio__img" />
@@ -571,7 +741,7 @@ window.addEventListener('DOMContentLoaded', loadAllSkills);
       </section>
 
       <!--===================== Contact Me =====================-->
-      <section class="contact section" id="contact">
+      <section class="contact section" id="contact" data-animate>
         <h2 class="section__title">Contact Me</h2>
         <span class="section__subtitle">Get in touch</span>
 
@@ -649,7 +819,7 @@ window.addEventListener('DOMContentLoaded', loadAllSkills);
       </section>
 
       <!--===================== Develop Blog =====================-->
-      <section class="blog section" id="blog">
+      <section class="blog section" id="blog" data-animate>
         <h2 class="section__title">Blog</h2>
         <span class="section__subtitle">Latest articles & insights</span>
         <div class="blog__container container grid">
@@ -676,6 +846,9 @@ window.addEventListener('DOMContentLoaded', loadAllSkills);
           <ul class="footer__links">
             <li>
               <a href="#qualification" class="footer__link">Qualification</a>
+            </li>
+            <li>
+              <a href="#services" class="footer__link">Services</a>
             </li>
             <li>
               <a href="#portfolio" class="footer__link">Portfolio</a>
