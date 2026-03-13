@@ -1,3 +1,14 @@
+/*==================== Content protection (deter copying) ====================*/
+document.addEventListener("contextmenu", function (e) { e.preventDefault(); });
+document.addEventListener("copy", function (e) { e.preventDefault(); });
+document.addEventListener("cut", function (e) { e.preventDefault(); });
+document.addEventListener("dragstart", function (e) {
+  if (e.target.tagName === "IMG") e.preventDefault();
+});
+if (document.images) {
+  for (var i = 0; i < document.images.length; i++) document.images[i].draggable = false;
+}
+
 const navMenu = document.getElementById("nav-menu"),
   navToggle = document.getElementById("nav-toggle");
 navClose = document.getElementById("nav-close");
